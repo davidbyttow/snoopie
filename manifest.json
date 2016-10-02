@@ -1,13 +1,14 @@
 {
   "manifest_version": 2,
 
-  "name": "Fullstory tracker",
-  "description": "This extension will alert you if you're being recorded by Fullstory",
+  "name": "Snooptracker",
+  "description": "This extension will alert you if you're being recorded by Fullstory, Inspectlet or hotjar.",
   "version": "0.1",
 
   "permissions": [
     "activeTab",
-    "tabs"
+    "tabs",
+    "<all_urls>"
   ],
 
   "background": {
@@ -16,7 +17,13 @@
   },
 
   "browser_action": {
-    "default_title": "Make this page red",
-    "default_icon": "gray.png"
+    "default_title": "No snoops detected",
+    "default_icon": "snooptracker-inactive-16.png"
+  },
+
+  "icons": {
+    "16": "snooptracker-16.png",
+    "48": "snooptracker-48.png",
+    "128": "snooptracker-128.png"
   }
 }
