@@ -17,7 +17,6 @@ function handleMessage(request, sender) {
 
   var title = DEFAULT_TITLE;
   var icon = DEFAULT_ICON;
-  var isWatching = snoops.length;
   if (snoops.length) {
     title = 'Snoops detected: ' + snoops.join(',');
     icon = WATCHING_ICON;
@@ -29,6 +28,7 @@ function handleMessage(request, sender) {
 chrome.runtime.onMessage.addListener(handleMessage);
 
 function runTest() {
+  if (timeout)
   chrome.tabs.executeScript(null, {file: "content_script.js"});
 }
 
