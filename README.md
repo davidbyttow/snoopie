@@ -3,7 +3,7 @@ A (very simple) tracker for popular tracking services, provided as a Chrome web 
 
 This extension only lets you know when it detects Fullstory, inspectlet or hotjar for the loaded site on the active tab in Chrome.
 
-Software is provided as-is.
+Software is provided as-is and published here: https://chrome.google.com/webstore/detail/snoopie/ickbbjgidjpmiggaclheacnffnpghpbn
 
 If you want to see more trackers tracked, feel free to DM me [@davidbyttow](http://twitter.com/davidbyttow)
 
