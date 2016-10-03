@@ -1,7 +1,6 @@
 
-var DEFAULT_TITLE = 'No snoops detected';
-var DEFAULT_ICON = 'snooptracker-inactive-16.png';
-var WATCHING_ICON = 'snooptracker-active-16.png';
+var DEFAULT_TITLE = 'Nothing detected yet';
+var DEFAULT_BADGE_TEXT = '';
 
 function handleMessage(request, sender) {
   var snoops = [];
@@ -16,19 +15,19 @@ function handleMessage(request, sender) {
   }
 
   var title = DEFAULT_TITLE;
-  var icon = DEFAULT_ICON;
+  var badgeText = DEFAULT_BADGE_TEXT;
   if (snoops.length) {
-    title = 'Snoops detected: ' + snoops.join(',');
-    icon = WATCHING_ICON;
+    title = 'Snoopie detected: ' + snoops.join(',');
+    badgeText = '!';
+    chrome.browserAction.setBadgeBackgroundColor({ color: '#FF0000' });
   }
-  chrome.browserAction.setIcon({ path: icon });
   chrome.browserAction.setTitle({ title: title });
+  chrome.browserAction.setBadgeText({ text: badgeText });
 }
 
 chrome.runtime.onMessage.addListener(handleMessage);
 
 function runTest() {
-  if (timeout)
   chrome.tabs.executeScript(null, {file: "content_script.js"});
 }
 

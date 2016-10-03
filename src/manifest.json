@@ -1,9 +1,18 @@
 {
   "manifest_version": 2,
 
-  "name": "Snooptracker",
-  "description": "This extension will alert you if you're being recorded by Fullstory, Inspectlet or hotjar.",
+  "name": "Snoopie",
+  "short_name": "Snoopie",
+  "description": "Snoopie lets you know when you're being recorded by popular tracking services.",
   "version": "0.1",
+  "author": "David Byttow (d@simplethingsllc.com)",
+  "homepage_url": "https://github.com/davidbyttow/snooptracker",
+
+  "icons": {
+    "16": "dog-16.png",
+    "48": "dog-48.png",
+    "128": "dog-128.png"
+  },
 
   "permissions": [
     "activeTab",
@@ -17,13 +26,7 @@
   },
 
   "browser_action": {
-    "default_title": "No snoops detected",
-    "default_icon": "snooptracker-inactive-16.png"
-  },
-
-  "icons": {
-    "16": "snooptracker-16.png",
-    "48": "snooptracker-48.png",
-    "128": "snooptracker-128.png"
+    "default_title": "Nothing detected yet",
+    "default_icon": "dog-16.png"
   }
 }
