@@ -3,21 +3,10 @@ var DEFAULT_TITLE = 'Nothing detected yet';
 var DEFAULT_BADGE_TEXT = '';
 
 function handleMessage(request, sender) {
-  var snoops = [];
-  if (request.foundFs) {
-    snoops.push('fullstory');
-  }
-  if (request.foundIn) {
-    snoops.push('inspectlet');
-  }
-  if (request.foundHj) {
-    snoops.push('hotjar');
-  }
-
   var title = DEFAULT_TITLE;
   var badgeText = DEFAULT_BADGE_TEXT;
-  if (snoops.length) {
-    title = 'Snoopie detected: ' + snoops.join(',');
+  if (request.found.length) {
+    title = 'Snoopie detected: ' + request.found.join(',');
     badgeText = '!';
     chrome.browserAction.setBadgeBackgroundColor({ color: '#FF0000' });
   }

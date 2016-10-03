@@ -1,10 +1,21 @@
-var html = document.documentElement.innerHTML;
-var foundFs = html.indexOf('_fs_namespace') >= 0 || html.indexOf('www.fullstory.com/s/fs.js') >= 0;
-var foundIn = html.indexOf('cdn.inspectlet.com/inspectlet.js') >= 0;
-var foundHj = html.indexOf('static.hotjar.com/c/hotjar') >= 0;
+var spies = {
+  'www.fullstory.com/s/fs.js': 'fullstory',
+  'cdn.inspectlet.com/inspectlet.js': 'inspeclet',
+  'static.hotjar.com/c/hotjar': 'hotjar',
+  'cdn.mouseflow.com/projects': 'mouseflow',
+  'cdn.hoverowl.com/analytics/hoverowl.js': 'hoverowl',
+  'd10lpsik1i8c69.cloudfront.net/w.js': 'luckyorange',
+  'cjs.ptengine.com/pta_en.js': 'ptengine',
+  'sessioncam.recorder.js': 'sessioncam'
+};
 
-chrome.runtime.sendMessage({
-  foundFs: foundFs,
-  foundIn: foundIn,
-  foundHj: foundHj
-});
+var html = document.documentElement.innerHTML;
+
+var found = [];
+for (var url in spies) {
+  if (html.indexOf(url) >= 0) {
+    found.push(spies[url]);
+  }
+}
+
+chrome.runtime.sendMessage({ found: found });
