@@ -5,4 +5,4 @@ This extension only lets you know when it detects Fullstory, inspectlet or hotja
 
 Software is provided as-is.
 
-If you want to see more trackers tracked, feel free to DM me <http://twitter.com/davidbyttow|@davidbyttow>
+If you want to see more trackers tracked, feel free to DM me [@davidbyttow](http://twitter.com/davidbyttow)
