@@ -3,7 +3,7 @@ A (very simple) tracker for popular tracking services, provided as a Chrome web 
 
 This extension only lets you know when it detects popular tracking services in use on the active tab in Chrome.
 
-# [Background](https://medium.com/@davidbyttow/how-some-web-apps-are-watching-you-5aa16fdb1161)
+Background: [How web apps can watch your every move](https://medium.com/@davidbyttow/how-some-web-apps-are-watching-you-5aa16fdb1161)
 
 Currently supports:
 - Fullstory
