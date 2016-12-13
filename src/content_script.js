@@ -6,7 +6,8 @@ var spies = {
   'cdn.hoverowl.com/analytics/hoverowl.js': 'hoverowl',
   'd10lpsik1i8c69.cloudfront.net/w.js': 'luckyorange',
   'cjs.ptengine.com/pta_en.js': 'ptengine',
-  'sessioncam.recorder.js': 'sessioncam'
+  'sessioncam.recorder.js': 'sessioncam',
+  'rec.getsmartlook.com/recorder.js': 'smartlook'
 };
 
 var html = document.documentElement.innerHTML;
